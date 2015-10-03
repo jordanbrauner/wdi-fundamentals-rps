@@ -30,20 +30,37 @@ function randomPlay() {
 
 
 function getPlayerMove(move) {
-   if (move !== false && move !== 0 && move !== "" && move !== null && move !== undefined) {
-        return move;
-    } else {
-        getInput();
-    }
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
+    return move || getInput();
 }
 
 function getComputerMove(move) {
-     if (move !== false && move !== 0 && move !== "" && move !== null && move !== undefined) {
-        return move;
-    } else {
-        randomPlay();
-    }
+    // Write an expression that operates on a variable called `move`
+    // If a `move` has a value, your expression should evaluate to that value.
+    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
+    return move || randomPlay;;
 }
+
+// ORIGINAL ANSWER
+
+// function getPlayerMove(move) {
+//    if (move !== false && move !== 0 && move !== "" && move !== null && move !== undefined) {
+//         return move;
+//     } else {
+//         getInput();
+//     }
+// }
+
+// function getComputerMove(move) {
+//      if (move !== false && move !== 0 && move !== "" && move !== null && move !== undefined) {
+//         return move;
+//     } else {
+//         randomPlay();
+ 
+//     }
+// }
 
 function getWinner(playerMove,computerMove) {
     var winner;
