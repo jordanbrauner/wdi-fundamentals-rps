@@ -1,12 +1,16 @@
+
 ////////////////////////////////////////////////
 /*   Provided Code - Please Don't Edit   */
 ////////////////////////////////////////////////
+
+
 'use strict';
 
 function getInput() {
     console.log("Please choose either 'rock', 'paper', or 'scissors'.")
     return prompt();
 }
+
 function randomPlay() {
     var randomNumber = Math.random();
     if (randomNumber < 0.33) {
@@ -17,22 +21,28 @@ function randomPlay() {
         return "scissors";
     }
 }
+
+
+
 ////////////////////////////////////////////////
 /*           Write Your Code Below            */
 ////////////////////////////////////////////////
 
+
 function getPlayerMove(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `getInput()`.
-    return /* Your Expression */;
+   if (move !== false && move !== 0 && move !== "" && move !== null && move !== undefined) {
+        return move;
+    } else {
+        getInput();
+    }
 }
 
 function getComputerMove(move) {
-    // Write an expression that operates on a variable called `move`
-    // If a `move` has a value, your expression should evaluate to that value.
-    // However, if `move` is not specified / is null, your expression should equal `randomPlay()`.
-    return /* Your Expression */;
+     if (move !== false && move !== 0 && move !== "" && move !== null && move !== undefined) {
+        return move;
+    } else {
+        randomPlay();
+    }
 }
 
 function getWinner(playerMove,computerMove) {
